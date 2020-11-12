@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+
 }
 
 android {
@@ -42,6 +44,11 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    //for dimensions according to screen size
-    implementation 'com.intuit.sdp:sdp-android:1.0.5'
+    // retrofit libraries
+    implementation appDependencies.retrofit
+    implementation appDependencies.retrofitGsonConverter
+    implementation appDependencies.retrofitRxJavaAdapter
+    implementation appDependencies.okHttpLogging
+    implementation appDependencies.rxAndroid
+    implementation appDependencies.sdp
 }

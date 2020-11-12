@@ -29,7 +29,7 @@ class DashboardAdapter(var context: Context, var mainDataList: HashMap<String, A
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         try {
-            holder.date.text = getFormattedDate(dateList.elementAt(position),"DD/MM/YYYY","YY-MM-DD")
+            holder.date.text = getFormattedDate(dateList.elementAt(position),"dd/mm/yyyy","yyyy-mm-dd")
             holder.rvVaseDataGrid.layoutManager = GridLayoutManager(context, 3)
             val subDataMap: HashMap<String, Double> = Gson().fromJson(
                 subList.elementAt(position).toString(), HashMap::class.java

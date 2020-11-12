@@ -17,12 +17,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:fontFamily="sans-serif"
             android:gravity="center"
             android:padding="@dimen/_10sdp"
-            android:text="Please Login"
+            android:text="@string/please_login"
             android:textColor="@color/white"
-            android:textSize="@dimen/_30sdp"
+            android:textSize="@dimen/_20sdp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -37,15 +36,18 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/userIcon"
-        android:elevation="@dimen/_3sdp">
+        android:elevation="@dimen/_3sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_15sdp">
         <LinearLayout
             android:id="@+id/loginForm"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_20sdp"
+            android:padding="@dimen/_20sdp"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -60,14 +62,13 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:drawableLeft="@drawable/profile"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center_horizontal"
-                    android:hint="User Name"
+                    android:hint="@string/user_name"
                     android:inputType="text"
                     android:maxLength="30"
+                    android:drawablePadding="@dimen/_10sdp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/theme_blue_dark"
-                    android:textSize="@dimen/_15sdp" />
+                    android:textSize="@dimen/_12sdp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -86,13 +87,12 @@
                     android:background="@android:color/transparent"
                     android:drawableStart="@drawable/passwordlock"
                     android:drawableLeft="@drawable/passwordlock"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center_horizontal"
-                    android:hint="Password"
+                    android:hint="@string/password"
                     android:inputType="textPassword"
+                    android:drawablePadding="@dimen/_10sdp"
                     android:textColorHint="@color/theme_blue_dark"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_15sdp"
+                    android:textSize="@dimen/_12sdp"
                     android:maxLength="20"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,13 +100,12 @@
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_30sdp"
                 android:background="@color/theme_blue"
-                android:fontFamily="sans-serif"
-                android:padding="@dimen/_5sdp"
-                android:text="Login"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/login"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_15sdp"
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
